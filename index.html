@@ -3,100 +3,940 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Krishna Chaitanya Pokkali | Technology & Camera Systems Leader</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <meta name="description" content="Krishna Chaitanya Pokkali - Technology leader in camera systems, advanced manufacturing, product quality, AI-enabled inspection, and sustainable manufacturing." />
+  <title>Krishna Chaitanya Pokkali | Camera Systems & Advanced Manufacturing Leader</title>
 
-  <header class="hero">
-    <div class="container">
-      <h1>Krishna Chaitanya Pokkali</h1>
-      <p class="subtitle">
-        Senior Technical Product Manager | Camera Systems | Advanced Manufacturing | Product Quality
-      </p>
-      <p>
-        I lead camera manufacturing, quality, and product-readiness initiatives for high-volume consumer electronics, with experience across iPhone, iPad, and MacBook camera systems.
-      </p>
-      <div class="buttons">
-        <a href="#projects">View Projects</a>
-        <a href="#contact">Contact Me</a>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --blue: #0071e3;
+      --blue-dark: #005bb5;
+      --card: rgba(255, 255, 255, 0.82);
+      --border: rgba(0, 0, 0, 0.08);
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+      --radius-lg: 34px;
+      --radius-md: 24px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 48px;
+      backdrop-filter: saturate(180%) blur(22px);
+      -webkit-backdrop-filter: saturate(180%) blur(22px);
+      background: rgba(245, 245, 247, 0.72);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      height: 48px;
+      padding: 0 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      letter-spacing: -0.01em;
+      color: rgba(29, 29, 31, 0.82);
+    }
+
+    .brand {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      opacity: 0.82;
+      transition: opacity 180ms ease, color 180ms ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+      color: #000;
+    }
+
+    .nav-cta {
+      color: white !important;
+      background: var(--blue);
+      padding: 5px 12px;
+      border-radius: 999px;
+      opacity: 1 !important;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 132px 24px 72px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      position: relative;
+      background:
+        radial-gradient(circle at 50% 28%, rgba(0, 113, 227, 0.18), transparent 32%),
+        radial-gradient(circle at 78% 18%, rgba(175, 82, 222, 0.16), transparent 26%),
+        radial-gradient(circle at 23% 70%, rgba(48, 209, 88, 0.12), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #f5f5f7 72%, #ececf0 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.28) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.28) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at center, black 0%, transparent 72%);
+      -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 72%);
+      opacity: 0.42;
+    }
+
+    .hero-content {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #30d158;
+      box-shadow: 0 0 0 5px rgba(48, 209, 88, 0.14);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(56px, 8vw, 112px);
+      line-height: 0.92;
+      letter-spacing: -0.075em;
+      font-weight: 700;
+    }
+
+    .hero-gradient-text {
+      display: block;
+      background: linear-gradient(95deg, #1d1d1f 0%, #0071e3 42%, #7d5fff 72%, #1d1d1f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 780px;
+      margin: 26px auto 0;
+      color: var(--muted);
+      font-size: clamp(22px, 3vw, 32px);
+      line-height: 1.18;
+      letter-spacing: -0.045em;
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 21px;
+      border-radius: 999px;
+      font-size: 17px;
+      letter-spacing: -0.02em;
+      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--blue);
+      color: white;
+      box-shadow: 0 14px 30px rgba(0, 113, 227, 0.24);
+    }
+
+    .button-primary:hover {
+      background: var(--blue-dark);
+    }
+
+    .button-secondary {
+      color: var(--blue);
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(0, 113, 227, 0.18);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .device-stage {
+      width: min(980px, 94vw);
+      margin: 64px auto 0;
+      border-radius: 44px;
+      padding: 10px;
+      background: linear-gradient(140deg, rgba(255,255,255,0.95), rgba(255,255,255,0.38));
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.78);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .device-screen {
+      min-height: 430px;
+      border-radius: 36px;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(0,113,227,0.42), transparent 26%),
+        radial-gradient(circle at 72% 30%, rgba(125,95,255,0.38), transparent 30%),
+        radial-gradient(circle at 50% 82%, rgba(48,209,88,0.20), transparent 28%),
+        linear-gradient(135deg, #08090d 0%, #1b1d2b 48%, #090a0f 100%);
+      color: white;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 48px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .device-screen::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.16) 38%, transparent 54%),
+        radial-gradient(circle at 50% 0%, rgba(255,255,255,0.25), transparent 36%);
+      opacity: 0.78;
+    }
+
+    .device-copy {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .device-copy h2 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+    }
+
+    .device-copy p {
+      margin: 0;
+      color: rgba(255,255,255,0.72);
+      font-size: clamp(18px, 2.4vw, 25px);
+      line-height: 1.28;
+      letter-spacing: -0.025em;
+    }
+
+    section {
+      padding: 88px 24px;
+    }
+
+    .section-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 42px;
+    }
+
+    .section-kicker {
+      color: #bf4800;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 9px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: clamp(19px, 2.5vw, 26px);
+      line-height: 1.24;
+      letter-spacing: -0.035em;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .metric-card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      border-radius: var(--radius-md);
+      padding: 30px 24px;
+      box-shadow: 0 22px 56px rgba(0, 0, 0, 0.07);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      min-height: 178px;
+    }
+
+    .metric-card strong {
+      display: block;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      font-weight: 700;
+      margin-bottom: 12px;
+      background: linear-gradient(120deg, #1d1d1f, #0071e3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .metric-card span {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.28;
+      letter-spacing: -0.01em;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .showcase-card {
+      min-height: 430px;
+      border-radius: var(--radius-lg);
+      padding: 42px;
+      background: #fff;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.08);
+    }
+
+    .showcase-card.dark {
+      background:
+        radial-gradient(circle at 78% 24%, rgba(0,113,227,0.32), transparent 26%),
+        radial-gradient(circle at 28% 78%, rgba(125,95,255,0.28), transparent 30%),
+        linear-gradient(145deg, #0b0d12, #1d2130 54%, #08090d);
+      color: white;
+    }
+
+    .showcase-card.soft {
+      background:
+        radial-gradient(circle at 70% 25%, rgba(48,209,88,0.22), transparent 28%),
+        radial-gradient(circle at 25% 78%, rgba(0,113,227,0.16), transparent 34%),
+        linear-gradient(180deg, #ffffff, #f1f4f8);
+    }
+
+    .showcase-card h3 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 56px);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      max-width: 620px;
+    }
+
+    .showcase-card p {
+      margin: 18px 0 0;
+      font-size: 19px;
+      line-height: 1.33;
+      letter-spacing: -0.025em;
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    .showcase-card.dark p {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .visual-chip-stack {
+      position: absolute;
+      right: 34px;
+      bottom: 34px;
+      display: grid;
+      gap: 14px;
+      width: min(360px, 45%);
+    }
+
+    .visual-chip {
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.7);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.12);
+      font-size: 14px;
+      color: rgba(29,29,31,0.82);
+    }
+
+    .dark .visual-chip {
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.86);
+      border-color: rgba(255,255,255,0.18);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 38px;
+      min-height: 370px;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.075);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-card::after {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      right: -60px;
+      bottom: -70px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,113,227,0.22), transparent 66%);
+    }
+
+    .project-number {
+      color: var(--blue);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .project-card h3 {
+      margin: 16px 0 0;
+      font-size: clamp(28px, 3.2vw, 44px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      max-width: 520px;
+    }
+
+    .project-card p {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.36;
+      letter-spacing: -0.025em;
+      max-width: 560px;
+    }
+
+    .timeline {
+      max-width: 920px;
+      margin: 46px auto 0;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.75);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.08);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      padding: 30px 34px;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-year {
+      color: var(--muted);
+      font-size: 15px;
+      letter-spacing: -0.01em;
+      padding-top: 5px;
+    }
+
+    .timeline-content h3 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.14;
+      letter-spacing: -0.035em;
+    }
+
+    .timeline-content p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.4;
+      letter-spacing: -0.02em;
+    }
+
+    .quote-band {
+      padding: 112px 24px;
+      background:
+        radial-gradient(circle at 20% 18%, rgba(0,113,227,0.25), transparent 28%),
+        radial-gradient(circle at 80% 70%, rgba(125,95,255,0.22), transparent 31%),
+        linear-gradient(135deg, #0b0c10, #1a1d29 55%, #08090d);
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .quote-band .section-inner {
+      max-width: 980px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-band h2 {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1;
+      letter-spacing: -0.065em;
+    }
+
+    .quote-band p {
+      margin: 24px auto 0;
+      color: rgba(255,255,255,0.72);
+      max-width: 760px;
+      font-size: clamp(19px, 2.3vw, 26px);
+      line-height: 1.28;
+      letter-spacing: -0.035em;
+    }
+
+    .contact-card {
+      max-width: 980px;
+      margin: 42px auto 0;
+      border-radius: var(--radius-lg);
+      padding: 46px;
+      background:
+        radial-gradient(circle at 72% 28%, rgba(0,113,227,0.16), transparent 32%),
+        linear-gradient(180deg, #ffffff, #f7f7f9);
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
+    }
+
+    .contact-card p {
+      margin: 16px auto 0;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+    }
+
+    .contact-links {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      padding: 30px 24px 46px;
+      text-align: center;
+      color: #86868b;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 16px;
+      }
+
+      .metrics,
+      .projects,
+      .showcase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-card {
+        min-height: 142px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .visual-chip-stack {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 34px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav-inner {
+        padding: 0 16px;
+      }
+
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 112px;
+      }
+
+      .device-screen {
+        min-height: 360px;
+        padding: 34px 24px;
+      }
+
+      section {
+        padding: 72px 18px;
+      }
+
+      .showcase-card,
+      .project-card,
+      .contact-card {
+        padding: 30px;
+        border-radius: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top">KCP</a>
+      <div class="nav-links">
+        <a href="#impact">Impact</a>
+        <a href="#work">Work</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <section class="stats">
-    <div>
-      <h2>6+</h2>
-      <p>Years in advanced manufacturing and product quality</p>
-    </div>
-    <div>
-      <h2>3+</h2>
-      <p>Major Apple product families supported</p>
-    </div>
-    <div>
-      <h2>Global</h2>
-      <p>Manufacturing and supply-chain impact</p>
-    </div>
-  </section>
+  <main id="top">
+    <header class="hero">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="dot"></span>Camera systems · Advanced manufacturing · Product quality</div>
+        <h1>
+          Krishna Chaitanya
+          <span class="hero-gradient-text">Pokkali.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Technology leader building high-volume camera systems, quality architectures, and manufacturing readiness for next-generation consumer electronics.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore my work</a>
+          <a class="button button-secondary" href="#contact">Get in touch</a>
+        </div>
 
-  <section class="container">
-    <h2>About</h2>
-    <p>
-      I specialize in camera product development, manufacturing quality, process validation, supplier readiness, and high-volume launch execution. My work connects hardware design, process engineering, quality systems, and data-driven manufacturing methods.
-    </p>
-  </section>
+        <div class="device-stage" aria-label="Professional profile showcase">
+          <div class="device-screen">
+            <div class="device-copy">
+              <h2>Precision at scale.</h2>
+              <p>
+                From camera module reliability to AI-enabled quality systems, my work connects product design, manufacturing execution, supplier readiness, and field performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <section class="container" id="projects">
-    <h2>Signature Work</h2>
+    <section id="impact">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">Impact</div>
+          <h2 class="section-title">Engineering work designed for real-world scale.</h2>
+          <p class="section-subtitle">
+            A portfolio spanning camera manufacturing, launch readiness, quality systems, sustainability, and advanced product operations.
+          </p>
+        </div>
 
-    <div class="card">
-      <h3>Camera Voice Coil Motor Reliability</h3>
-      <p>
-        Developed improvements focused on autofocus stability, electrostatic charge reduction, and camera actuator performance in compact camera modules.
-      </p>
-    </div>
+        <div class="metrics">
+          <div class="metric-card">
+            <strong>6+</strong>
+            <span>Years across advanced manufacturing, product quality, and consumer electronics operations.</span>
+          </div>
+          <div class="metric-card">
+            <strong>3</strong>
+            <span>Major Apple product families supported: iPhone, iPad, and MacBook camera systems.</span>
+          </div>
+          <div class="metric-card">
+            <strong>Global</strong>
+            <span>Manufacturing and supplier readiness experience across high-volume product launches.</span>
+          </div>
+          <div class="metric-card">
+            <strong>AI + QC</strong>
+            <span>Focus on data-driven inspection, process validation, metrology, and quality intelligence.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <h3>Multi-Camera Synchronization</h3>
-      <p>
-        Supported camera synchronization capabilities relevant to AR/VR, stereo capture, multi-camera imaging, and immersive visual experiences.
-      </p>
-    </div>
+    <section>
+      <div class="section-inner">
+        <div class="showcase-grid">
+          <article class="showcase-card dark">
+            <h3>Camera quality, built into the process.</h3>
+            <p>
+              I work at the intersection of optics, mechanics, electronics, manufacturing controls, and production analytics to improve camera module performance from NPI to mass production.
+            </p>
+            <div class="visual-chip-stack">
+              <div class="visual-chip">Design for manufacturability</div>
+              <div class="visual-chip">Supplier process readiness</div>
+              <div class="visual-chip">Metrology and test correlation</div>
+            </div>
+          </article>
 
-    <div class="card">
-      <h3>Sustainable Camera Manufacturing</h3>
-      <p>
-        Advanced sustainability-focused manufacturing initiatives, including material optimization, PFAS reduction, and recycled material adoption.
-      </p>
-    </div>
+          <article class="showcase-card soft">
+            <h3>Sustainability with engineering discipline.</h3>
+            <p>
+              My manufacturing work includes material optimization, PFAS reduction, recycled material adoption, and process improvements that support cleaner high-volume production.
+            </p>
+            <div class="visual-chip-stack">
+              <div class="visual-chip">PFAS reduction</div>
+              <div class="visual-chip">Recycled materials</div>
+              <div class="visual-chip">Carbon-conscious manufacturing</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <h3>Digital Twin for Consumer Electronics</h3>
-      <p>
-        Exploring digital twin methods for manufacturing intelligence, quality prediction, process optimization, and faster product development cycles.
-      </p>
-    </div>
-  </section>
+    <section id="work">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">Signature work</div>
+          <h2 class="section-title">Selected technical contributions.</h2>
+          <p class="section-subtitle">
+            Representative areas of work across camera systems, reliability, manufacturing quality, and emerging digital manufacturing methods.
+          </p>
+        </div>
 
-  <section class="container">
-    <h2>Professional Recognition</h2>
-    <ul>
-      <li>Camera systems and product quality leader at Apple</li>
-      <li>Conference committee and peer-review experience</li>
-      <li>Patent and innovation-focused technical contributions</li>
-      <li>Advanced manufacturing and sustainability impact</li>
-    </ul>
-  </section>
+        <div class="projects">
+          <article class="project-card">
+            <div>
+              <div class="project-number">01</div>
+              <h3>Voice Coil Motor reliability improvements</h3>
+              <p>
+                Work focused on autofocus stability, electrostatic charge reduction, actuator response, and camera module reliability in compact mobile camera systems.
+              </p>
+            </div>
+          </article>
 
-  <section class="container" id="contact">
-    <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
-    <p>LinkedIn: Add your LinkedIn URL</p>
-  </section>
+          <article class="project-card">
+            <div>
+              <div class="project-number">02</div>
+              <h3>Multi-camera synchronization</h3>
+              <p>
+                Contributions related to synchronized camera refresh and imaging behavior for stereo capture, AR/VR workflows, panoramas, and immersive visual experiences.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <div class="project-number">03</div>
+              <h3>AI-enabled manufacturing quality</h3>
+              <p>
+                Data-driven quality systems using process analytics, sampling strategies, inspection intelligence, correlation studies, and manufacturing feedback loops.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <div class="project-number">04</div>
+              <h3>Digital twin for consumer electronics</h3>
+              <p>
+                Exploration of digital twin methods to model production behavior, predict quality outcomes, optimize process settings, and accelerate decision-making.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">Experience</div>
+          <h2 class="section-title">A career built around product execution.</h2>
+          <p class="section-subtitle">
+            From semiconductor manufacturing to consumer electronics camera systems, my work has centered on engineering quality into complex products at scale.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">Apple</div>
+            <div class="timeline-content">
+              <h3>Camera systems, product quality, and manufacturing readiness</h3>
+              <p>
+                Leading cross-functional work across camera manufacturing, quality validation, process readiness, supplier execution, and high-volume product launch support.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">GlobalFoundries</div>
+            <div class="timeline-content">
+              <h3>Semiconductor manufacturing and process quality</h3>
+              <p>
+                Experience in advanced manufacturing environments supporting process controls, quality engineering, and product execution in semiconductor operations.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">Academic foundation</div>
+            <div class="timeline-content">
+              <h3>Industrial engineering and automotive engineering</h3>
+              <p>
+                Technical foundation across quality systems, manufacturing engineering, product design, process optimization, and data-driven problem solving.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">Professional service</div>
+            <div class="timeline-content">
+              <h3>Reviewer, committee member, and technology contributor</h3>
+              <p>
+                Active across peer review, conference committees, technical writing, awards, fellowships, and professional recognition initiatives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="section-inner">
+        <h2>Technology is strongest when precision becomes repeatable.</h2>
+        <p>
+          My focus is building the systems that make advanced products manufacturable, measurable, reliable, and scalable.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let’s connect.</h2>
+          <p class="section-subtitle">
+            For technical collaborations, professional recognition, speaking opportunities, judging roles, or advisory discussions.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Krishna Chaitanya Pokkali</h3>
+          <p>
+            Senior technology and product quality leader focused on camera systems, advanced manufacturing, sustainable operations, and AI-enabled quality intelligence.
+          </p>
+          <div class="contact-links">
+            <a class="button button-primary" href="mailto:kcp360r@gmail.com">Email me</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/kcp360r/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="button button-secondary" href="#top">Back to top</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2026 Krishna Chaitanya Pokkali. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
